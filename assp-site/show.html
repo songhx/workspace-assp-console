@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+      <title>E站点官网</title>
+
+    <link href="./static/bootstrap-3.3.7/css/bootstrap.min.css" title="" rel="stylesheet">
+    <link href="./static/font-awesome-4.7.0/css/font-awesome.min.css" title="" rel="stylesheet">
+    <link href="./css/animate.css" title="" rel="stylesheet">
+    <link href="./css/style1.css" title="" rel="stylesheet">
+    <style type="text/css">
+
+        a {
+            text-decoration: none;
+            outline: none;
+            transition: color 0.2s;
+        }
+
+
+        .hidden {
+            position: absolute;
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+        }
+        .grid {
+            position: relative;
+            display: flex;
+            /*flex-wrap: wrap;*/
+            justify-content: center;
+            align-items: center;
+           /* width: 100%;*/
+            padding: 0 7em;
+            perspective: 800px;
+            perspective-origin: 50% 100%;
+        }
+
+        .grid__item {
+            position: relative;
+            display: block;
+            flex: none;
+            width: 249px;
+            margin: 0.5em 1vw;
+            cursor: default;
+            transform-style: preserve-3d;
+        }
+
+        .grid__item:hover,
+        .grid__item:focus {
+            outline: none;
+        }
+        .stack {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            transform-style: preserve-3d;
+        }
+
+        .stack__deco {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: currentColor;
+            transform-origin: 50% 50%;
+        }
+
+        .stack__deco:first-child {
+            opacity: 0.2;
+        }
+
+        .stack__deco:nth-child(2) {
+            opacity: 0.4;
+        }
+
+        .stack__deco:nth-child(3) {
+            opacity: 0.6;
+        }
+
+        .stack__deco:nth-child(4) {
+            opacity: 0.8;
+        }
+
+        .stack__figure {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transform-origin: 50% 50%;
+        }
+
+        .stack__img {
+            position: relative;
+            display: block;
+            flex: none;
+        }
+
+        .grid__item--c2,
+        .grid__item--c2:hover,
+        .grid__item--c2:focus {
+            color: #b6b5b1;
+        }
+
+    </style>
+
+</head>
+<body id="page-top" class="landing-page no-skin-config pace-done">
+  <div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+        <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+  </div>
+ <div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- logo -->
+                <a href="index.html" class="navbar-brand mystyle-brand" style="padding: 8px 15px;">
+                    <!--<img src="images/6b62e0046ac844458abe7ce7615d4432.png" width="48px" height="48px">
+                    <img src="images/f46ececc0b40443eaeeecbf241910e1f.png" width="18px" height="18px" class="logo-site">-->
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a class="page-scroll" href="#page-top">首页</a></li>
+                    <li class=""><a class="page-scroll" href="#templates">精品模板</a></li>
+                    <li class=""><a class="page-scroll" href="#services">业务服务</a></li>
+                    <li class=""><a class="page-scroll" href="#testimonials">用户案例</a></li>
+                    <li class=""><a class="page-scroll" href="#pricing">加盟合作</a></li>
+                    <li class=""><a class="page-scroll" href="#contact">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+  <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#inSlider" data-slide-to="0" class=""></li>
+          <li data-target="#inSlider" data-slide-to="1" class="active"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+          <div class="item active">
+              <div class="container">
+                  <div class="carousel-caption">
+                      <h1>我们专注于<br>
+                          企业服务, 企业建站,<br>
+                          和人性化服务<br>
+                         共赢互联网+</h1>
+                      <p>了解更过E站点.</p>
+                      <p>
+                          <a class="btn btn-lg btn-primary" href="#" role="button">我要建站</a>
+                          <a class="caption-link" href="#" role="button">我要建站</a>
+                      </p>
+                  </div>
+                  <div class="carousel-image wow zoomIn animated" style="visibility: visible;">
+                      <img src="./images/laptop.png" alt="laptop">
+                  </div>
+              </div>
+              <!-- Set background for slide in css -->
+              <div class="header-back one"></div>
+
+          </div>
+          <div class="item ">
+              <div class="container">
+                  <div class="carousel-caption blank">
+                      <h1>因为信任 <br> 所以携手共进 <br></h1>
+                      <p><a class="btn btn-lg btn-primary " href="#" role="button" style="margin-top: 30px;">我要建站</a></p>
+                  </div>
+              </div>
+              <!-- Set background for slide in css -->
+              <div class="header-back two"></div>
+          </div>
+      </div>
+      <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+
+
+  <section class="container features">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <div class="navy-line"></div>
+              <h1>超过 1000+ 企业级模板<br> <span class="navy"> 为您提供更加便捷、安全、迅速的建站体验</span> </h1>
+              <p>我们用心雕琢每一套站点，为您的企业提供更加优质的服务。 </p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-3 text-center wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+              <div>
+                  <i class="fa fa-hourglass features-icon"></i>
+                  <h2>海量精美模板</h2>
+                  <p>1000+高颜值H5网站模板，覆盖主流行业，任意选用。<br><br></p>
+              </div>
+              <div class="m-t-lg">
+                  <i class="fa fa-cubes features-icon"></i>
+                  <h2>跨屏浏览自动响应</h2>
+                  <p>跨设备浏览自动适应匹配，获得绝佳的访问体验。<br><br></p>
+              </div>
+          </div>
+          <div class="col-md-6 text-center  wow zoomIn animated" style="visibility: visible;">
+              <img src="./images/perspective.png" alt="dashboard" class="img-responsive">
+          </div>
+          <div class="col-md-3 text-center wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+              <div>
+                  <i class="fa fa-cloud features-icon"></i>
+                  <h2>安全稳定快速</h2>
+                  <p>依托阿里云计算平台，网站安全稳定，访问快速。<br><br></p>
+              </div>
+              <div class="m-t-lg">
+                  <i class="fa fa-diamond features-icon"></i>
+                  <h2>用户口碑推荐</h2>
+                  <p>百万企业信赖推荐，市场口碑零差评，性价比高。<br><br></p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <div class="navy-line"></div>
+              <h1>为您开启更多优质服务</h1>
+              <p>我们竭诚为您提供更多的企业服务，我们携手共进，定能乘风破浪。 </p>
+          </div>
+      </div>
+      <div class="row features-block">
+          <div class="col-lg-6 features-text wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;">
+              <small>更多服务</small>
+              <h2>服务介绍 </h2>
+              <p>
+                  互联网技术的发展与更新换代，网站建设在扁平化的设计风格也开始被推广。在早期的网站建设中，扁平化的设计比较重视色彩以及极简化，并没有其他元素进行修饰，但是这种扁平化设计难道就可以收获用户的心吗？其实不是这样的，
+                  因为用户的爱好都是不一样的，有些用户对这些极简设计并不买账的，会觉得这种设计实在无趣。扁平化设计想要在网站建设行业中有很好的发展，那么方向就一定要有所改变。
+              </p>
+              <a href="" class="btn btn-primary">开始建站</a>
+          </div>
+          <div class="col-lg-6 text-right wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
+              <img src="./images/dashboard.png" alt="dashboard" class="img-responsive pull-right">
+          </div>
+      </div>
+  </section>
+
+  <section id="templates" class="gray-section team">
+      <svg class="hidden">
+          <symbol id="icon-arrow" viewBox="0 0 24 24">
+              <title>arrow</title>
+              <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "></polygon>
+          </symbol>
+          <symbol id="icon-drop" viewBox="0 0 24 24">
+              <title>drop</title>
+              <path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"></path><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"></path>
+          </symbol>
+      </svg>
+      <div class="container">
+          <div class="row m-b-lg">
+              <div class="col-lg-12 text-center">
+                  <div class="navy-line"></div>
+                  <h1>精品模板</h1>
+                  <p>为您提供海量精致模板,从此建站无烦恼</p>
+              </div>
+          </div>
+          <div class="row m-b-lg grid">
+              <a href="#" class="grid__item grid__item--c2">
+                  <div class="stack">
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__figure" style="opacity: 1; transform: translateZ(0px) rotateX(0deg);">
+                          <img class="stack__img" src="./images/instrument-230-a.jpg" alt="Image" style="transform: scale(1);">
+                      </div>
+                  </div>
+              </a>
+              <a href="#" class="grid__item grid__item--c2">
+                  <div class="stack">
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__figure" style="opacity: 1; transform: translateZ(0px) rotateX(0deg);">
+                          <img class="stack__img" src="./images/travel-1134140-a.jpg" alt="Image" style="transform: scale(1);">
+                      </div>
+                  </div>
+              </a>
+              <a href="#" class="grid__item grid__item--c2">
+                  <div class="stack">
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__figure" style="opacity: 1; transform: translateZ(0px) rotateX(0deg);">
+                          <img class="stack__img" src="./images/restaurant-267-a.jpg" alt="Image" style="transform: scale(1);">
+                      </div>
+                  </div>
+              </a>
+              <a href="#" class="grid__item grid__item--c2">
+                  <div class="stack">
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__figure" style="opacity: 1; transform: translateZ(0px) rotateX(0deg);">
+                          <img class="stack__img" src="./images/advertising-1062346-a.jpg" alt="Image" style="transform: scale(1);">
+                      </div>
+                  </div>
+              </a>
+
+          </div>
+
+          <div class="row m-b-lg grid">
+              <a href="#" class="grid__item grid__item--c2">
+                  <div class="stack">
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__figure" style="opacity: 1; transform: translateZ(0px) rotateX(0deg);">
+                          <img class="stack__img" src="./images/instrument-230-a.jpg" alt="Image" style="transform: scale(1);">
+                      </div>
+                  </div>
+              </a>
+              <a href="#" class="grid__item grid__item--c2">
+                  <div class="stack">
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__figure" style="opacity: 1; transform: translateZ(0px) rotateX(0deg);">
+                          <img class="stack__img" src="./images/travel-1134140-a.jpg" alt="Image" style="transform: scale(1);">
+                      </div>
+                  </div>
+              </a>
+              <a href="#" class="grid__item grid__item--c2">
+                  <div class="stack">
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__figure" style="opacity: 1; transform: translateZ(0px) rotateX(0deg);">
+                          <img class="stack__img" src="./images/restaurant-267-a.jpg" alt="Image" style="transform: scale(1);">
+                      </div>
+                  </div>
+              </a>
+              <a href="#" class="grid__item grid__item--c2">
+                  <div class="stack">
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__deco" style="opacity: 0; transform: translateZ(0px) rotateX(0deg);"></div>
+                      <div class="stack__figure" style="opacity: 1; transform: translateZ(0px) rotateX(0deg);">
+                          <img class="stack__img" src="./images/advertising-1062346-a.jpg" alt="Image" style="transform: scale(1);">
+                      </div>
+                  </div>
+              </a>
+
+          </div>
+
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                  <p><a>浏览更多精美模板 >> </a></p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+  <section id="services" class="navy-section testimonials" style="margin-top: 36px;">
+
+      <div class="container">
+          <div class="row m-b-lg">
+              <div class="col-lg-12 text-center">
+                  <div class="navy-line"></div>
+                  <h1>业务服务</h1>
+                  <!--<p>为您提供海量精致模板,从此建站无烦恼</p>-->
+              </div>
+          </div>
+          <div class="row">
+          </div>
+      </div>
+
+  </section>
+
+
+  <section id="contact" class="gray-section contact">
+      <div class="container">
+          <div class="row m-b-lg">
+              <div class="col-lg-12 text-center">
+                  <div class="navy-line"></div>
+                  <h1>联系我们</h1>
+                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+              </div>
+          </div>
+          <div class="row m-b-lg">
+              <div class="col-lg-3 col-lg-offset-3">
+                  <address>
+                      <strong><span class="navy">Company name, Inc.</span></strong><br>
+                      795 Folsom Ave, Suite 600<br>
+                      San Francisco, CA 94107<br>
+                      <abbr title="Phone">P:</abbr> (123) 456-7890
+                  </address>
+              </div>
+              <div class="col-lg-4">
+                  <p class="text-color">
+                      Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis, totam corporis laboriosam veritatis, consectetur adipisicing elit quos non quis ad perspiciatis, totam corporis ea,
+                  </p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+                  <p class="m-t-sm">
+                      Or follow us on social platform
+                  </p>
+                  <ul class="list-inline social-icon">
+                      <li><a href="http://webapplayers.com/inspinia_admin-v2.7.1/landing.html#"><i class="fa fa-twitter"></i></a>
+                      </li>
+                      <li><a href="http://webapplayers.com/inspinia_admin-v2.7.1/landing.html#"><i class="fa fa-facebook"></i></a>
+                      </li>
+                      <li><a href="http://webapplayers.com/inspinia_admin-v2.7.1/landing.html#"><i class="fa fa-linkedin"></i></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
+</body>
+<script src="./static/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="./static/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./js/anime.min.js" type="text/javascript"></script>
+<script src="./js/main.js" type="text/javascript"></script>
+<script>
+
+    $(document).ready(function () {
+
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 80
+        });
+
+        // Page scrolling feature
+        $('a.page-scroll').bind('click', function(event) {
+            var link = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(link.attr('href')).offset().top - 50
+            }, 500);
+            event.preventDefault();
+            $("#navbar").collapse('hide');
+        });
+
+        [].slice.call(document.querySelectorAll('.grid > .grid__item')).forEach(function(stackEl) {
+            new VegaFx(stackEl);
+        });
+
+    });
+
+    var cbpAnimatedHeader = (function() {
+        var docElem = document.documentElement,
+                header = document.querySelector( '.navbar-default' ),
+                didScroll = false,
+                changeHeaderOn = 200;
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                $(header).addClass('navbar-scroll')
+            }
+            else {
+                $(header).removeClass('navbar-scroll')
+            }
+            didScroll = false;
+        }
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+        init();
+
+    })();
+
+    // Activate WOW.js plugin for animation on scrol
+    //new WOW().init();
+
+</script>
+<script src="./js/h.js" type="text/javascript"></script>
+</html>
