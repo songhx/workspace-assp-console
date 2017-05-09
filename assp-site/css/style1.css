@@ -3556,10 +3556,10 @@ a:focus {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-video {
+/*video {
     width: 100% !important;
     height: auto !important;
-}
+}*/
 /* GALLERY */
 .gallery > .row > div {
     margin-bottom: 15px;
@@ -7211,7 +7211,7 @@ body.landing-page {
 }
 .landing-page .testimonials {
   /*  padding-top: 100px;*/
-    padding-bottom: 500px;
+    padding-bottom: 66px;
  /*   background-color: #1ab394;*/
    /* background-image: url('../images/avatar_all.png');*/
     background-image: url('../images/solutions_bg.jpg');
