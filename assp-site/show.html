@@ -13,203 +13,7 @@
     <link href="./static/font-awesome-4.7.0/css/font-awesome.min.css" title="" rel="stylesheet">
     <link href="./css/animate.css" title="" rel="stylesheet">
     <link href="./css/style1.css" title="" rel="stylesheet">
-    <style type="text/css">
-
-        a {
-            text-decoration: none;
-            outline: none;
-            transition: color 0.2s;
-        }
-
-
-        .hidden {
-            position: absolute;
-            overflow: hidden;
-            width: 0;
-            height: 0;
-            pointer-events: none;
-        }
-        .grid {
-            position: relative;
-            display: flex;
-            /*flex-wrap: wrap;*/
-            justify-content: center;
-            align-items: center;
-           /* width: 100%;*/
-            padding: 0 7em;
-            perspective: 800px;
-            perspective-origin: 50% 100%;
-        }
-
-        .grid__item {
-            position: relative;
-            display: block;
-            flex: none;
-            width: 249px;
-            margin: 0.5em 1vw;
-            cursor: default;
-            transform-style: preserve-3d;
-        }
-
-        .grid__item:hover,
-        .grid__item:focus {
-            outline: none;
-        }
-        .stack {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            transform-style: preserve-3d;
-        }
-
-        .stack__deco {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: currentColor;
-            transform-origin: 50% 50%;
-        }
-
-        .stack__deco:first-child {
-            opacity: 0.2;
-        }
-
-        .stack__deco:nth-child(2) {
-            opacity: 0.4;
-        }
-
-        .stack__deco:nth-child(3) {
-            opacity: 0.6;
-        }
-
-        .stack__deco:nth-child(4) {
-            opacity: 0.8;
-        }
-
-        .stack__figure {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-            transform-origin: 50% 50%;
-        }
-
-        .stack__img {
-            position: relative;
-            display: block;
-            flex: none;
-        }
-
-        .grid__item--c2,
-        .grid__item--c2:hover,
-        .grid__item--c2:focus {
-            color: #b6b5b1;
-        }
-
-
-
-
-        .cndns-main-category .category-container{ display:table}
-        .cndns-main-category li{float: left;  padding: 120px 1.5%; position: relative;text-align: center; width: 33.3333%;transition: all 0.7s ease 0s; -webkit-transition: all 0.7s ease 0s;
-            -moz-transition: all 0.7s ease 0s; -ms-transition: all 0.7s ease 0s;-o-transition: all 0.7s ease 0s; }
-        .cndns-main-category li h4{ color:#676a6c; font-size:20px; line-height:22px; padding-bottom:12px;}
-        .cndns-main-category li p{ color:#aeaeae; font-size:13px; line-height:20px; min-height:40px;  padding: 0 5% 20px;}
-        .cndns-main-category li.noToppadding{ padding-top:0}
-        .cndns-main-category li.noBottompadding{ padding-bottom:0}
-
-
-        .cndns-main-category ul {
-            margin: 0px;
-            padding: 0px;
-            list-style: none;
-        }
-        .category-apps a {box-shadow: -1px -0px 0 #eee inset;border-bottom: 1px solid #eee;display: block;float: left;margin: 0;max-width: 100%;padding:20px 0;width: 33.333%;color: #333;font-size: 12px;line-height: 12px;font-weight: inherit;position: relative;text-transform: uppercase;min-height: 60px;}
-        .category-apps a sup{ display:block; width:27px; height:27px; background-image:url(./images/02index-spri.png); background-repeat: no-repeat; position:absolute; top:0; right:0}
-        .category-apps a sup.hot{ background-position:0 -2584px;}
-        .category-apps a sup.new{ background-position:0 -2611px;}
-        .category-apps .noright { box-shadow: 0 0 0 #f5f5f5 inset;}
-        .category-apps .nobottom { box-shadow: -1px 0 0 #f5f5f5 inset; border-bottom:0}
-        .category-apps a:last-child{box-shadow: 0 0 0 #f5f5f5 inset; border-bottom: 0;}
-        .category-apps a:hover { border-bottom: 1px solid #ff6800;}
-        .category-apps .nolink:hover{ border-bottom:0; cursor:default; }
-        .category-apps a span {display: block; margin: 0 auto 3px; width:46px; height:48px; position:relative; top:0; transition: all 0.5s ease 0s;-moz-transition: all 0.5s ease 0s;-ms-transition: all 0.5s ease 0s;-o-transition: all 0.5s ease 0s;-webkit-transition: all 0.5s ease 0s;}
-        .category-apps a span i{ display:block; float:left; width:36px; height:33px; margin:7.5px 0 0 5px; background-image:url(./images/02index-spri.png); background-repeat: no-repeat; background-position:0 -1365px;}
-        .category-apps a span.pi2 i{ width:46px; height:33px; margin:7.5px 0 0 0; background-position:0 -1634px}
-        .category-apps a span.pi3 i{ width:34px; height:34px; margin:7px 0 0 6px; background-position:0 -1276px}
-        .category-apps a span.pi4 i{ width:32px; height:32px; margin:8px 0 0 7px; background-position:0 -884px}
-        .category-apps a span.pi5 i{ width:31px; height:29px; margin:9.5px 0 0 7.5px; background-position:0 -700px}
-        .category-apps a span.pi6 i{ width:31px; height:31px; margin:8.5px 0 0 7.5px; background-position:0 -793px}
-        .category-apps a span.pi7 i{ width:26px; height:34px; margin:7px 0 0 10px; background-position:0 -171px}
-        .category-apps a span.pi8 i{ width:33px; height:33px; margin:7.5px 0 0 6.5px; background-position:0 -1076px}
-        .category-apps a span.pi9 i{ width:37px; height:35px; margin:6.5px 0 0 4.5px; background-position:0 -1469px}
-        .category-apps a span.pi10 i{ width:34px; height:34px; margin:7px 0 0 6px; background-position:0 -1242px}
-        .category-apps a span.pi11 i{ width:34px; height:34px; margin:7px 0 0 6px; background-position:0 -1208px}
-        .category-apps a span.pi12 i{ width:22px; height:33px; margin:7.5px 0 0 12px; background-position:0 -101px}
-        .category-apps a span.pi13 i{ width:34px; height:25px; margin:11.5px 0 0 6px; background-position:0 -1310px}
-        .category-apps a span.pi14 i{ width:30px; height:30px; margin:9px 0 0 8px; background-position:0 -544px}
-        .category-apps a span.pi15 i{ width:27px; height:32px; margin:8px 0 0 9.5px; background-position:0 -241px}
-        .category-apps a span.pi16 i{ width:33px; height:32px; margin:8px 0 0 6.5px; background-position:0 -1142px}
-        .category-apps a span.pi17 i{ width:36px; height:30px; margin:9px 0 0 5px; background-position:0 -1335px}
-        .category-apps a span.pi18 i{ width:30px; height:30px; margin:9px 0 0 8px; background-position:0 -453px}
-        .category-apps a span.pi19 i{ width:29px; height:29px; margin:9.5px 0 0 8.5px; background-position:0 -394px}
-        .category-apps a span.pi20 i{ width:30px; height:29px; margin:9.5px 0 0 8px; background-position:0 -483px}
-        .category-apps a span.pi21 i{ width:26px; height:37px; margin:4.5px 0 0 11px; background-position:0 -134px}
-        .category-apps a span.pi22 i{ width:41px; height:24px; margin:12px 0 0 2.5px; background-position:0 -1563px}
-        .category-apps a span.pi23 i{ width:41px; height:26px; margin:11px 0 0 2.5px; background-position:0 -1587px}
-        .category-apps a span.pi24 i{ width:32px; height:32px; margin:8px 0 0 7px; background-position:0 -916px}
-        .category-apps a span.pi25 i{ width:29px; height:30px; margin:9px 0 0 8.5px; background-position:0 -364px}
-        .category-apps a span.pi26 i{ width:27px; height:36px; margin:6px 0 0 9.5px; background-position:0 -205px}
-        .category-apps a span.pi27 i{ width:27px; height:28px; margin:10px 0 0 9.5px; background-position:0 -302px}
-        .category-apps a span.pi28 i{ width:39px; height:28px; margin:10px 0 0 3.5px; background-position:0 -1504px}
-        .category-apps a span.pi29 i{ width:28px; height:34px; margin:7px 0 0 9px; background-position:0 -330px}
-        .category-apps a span.pi30 i{ width:31px; height:31px; margin:8.5px 0 0 7.5px; background-position:0 -574px}
-        .category-apps a span.pi31 i{ width:31px; height:31px; margin:8.5px 0 0 7.5px; background-position:0 -669px}
-        .category-apps a span.pi32 i{ width:31px; height:31px; margin:8.5px 0 0 7.5px; background-position:0 -638px}
-        .category-apps a span.pi33 i{ width:31px; height:31px; margin:8.5px 0 0 7.5px; background-position:0 -824px}
-        .category-apps a span.pi34 i{ width:30px; height:32px; margin:8px 0 0 8px; background-position:0 -512px}
-        .category-apps a span.pi35 i{ width:33px; height:33px; margin:7.5px 0 0 6.5px; background-position:0 -1109px}
-        .category-apps a span.pi36 i{ width:39px; height:31px; margin:8.5px 0 0 3.5px; background-position:0 -1532px}
-        .category-apps a span.pi37 i{ width:31px; height:33px; margin:7.5px 0 0 7.5px; background-position:0 -760px}
-        .category-apps a span.pi38 i{ width:44px; height:21px; margin:13.5px 0 0 1px; background-position:0 -1613px}
-        .category-apps a span.pi39 i{ width:34px; height:34px; margin:7px 0 0 6px; background-position:0 -1174px}
-        .category-apps a span.pi40 i{ width:32px; height:32px; margin:8px 0 0 7px; background-position:0 -948px}
-        .category-apps a span.pi41 i{ width:30px; height:30px; margin:9px 0 0 8px; background-position:0 -423px}
-        .category-apps a span.pi42 i{ width:37px; height:34px; margin:7px 0 0 4.5px; background-position:0 -1435px}
-        .category-apps a span.pi43 i{ width:32px; height:32px; margin:8px 0 0 7px; background-position:0 -1044px}
-        .category-apps a span.pi44 i{ width:37px; height:37px; margin:5.5px 0 0 4.5px; background-position:0 -1398px}
-        .category-apps a span.pi45 i{ width:27px; height:29px; margin:9.5px 0 0 9.5px; background-position:0 -273px}
-        .category-apps a span.pi46 i{ width:30px; height:29px; margin:9.5px 0 0 8px; background-position:0 -2299px}
-        .category-apps a span.pi47 i{ width:18px; height:48px; margin:0 0 0 14px; background-position:0 -35px}
-        .category-apps a span.pi48 i{ width:31px; height:33px; margin:7.5px 0 0 7.5px; background-position:0 -605px}
-        .category-apps a span.pi49 i{ width:32px; height:29px; margin:9.5px 0 0 7px; background-position:0 -855px}
-        .category-apps a span.pi50 i{ width:32px; height:32px; margin:8px 0 0 7px; background-position:0 -980px}
-        .category-apps a span.pi51 i{ width:31px; height:31px; margin:8.5px 0 0 7.5px; background-position:0 -729px}
-        .category-apps a span.pi52 i{ width:32px; height:32px; margin:8px 0 0 7px; background-position:0 -1012px}
-        .category-apps a span.pi53 i{ width:29px; height:39px; margin:4.5px 0 0 8.5px; background-position:0 -2638px}
-        .category-apps a span.pi54 i{ width:36px; height:34px; margin:7px 0 0 5px; background-position:0 -2348px}
-        .category-apps a span.pi55 i{ width:30px; height:37px; margin:5.5px 0 0 9px; background-position:0 -2382px}
-        .category-apps a span.pi56 i{ width:36px; height:42px; margin:3px 0 0 5px; background-position:0 -2419px}
-        .category-apps a span.pi57 i{ width:25px; height:33px; margin:7.5px 0 0 10.5px; background-position:0 -2461px}
-        .category-apps a span.pi58 i{ width:29px; height:29px; margin:9.5px 0 0 8.5px; background-position:0 -2494px}
-        .category-apps a span.pi59 i{ width:28px; height:30px; margin:9px 0 0 9px; background-position:0 -2523px}
-        .category-apps a span.pi60 i{ width:30px; height:31px; margin:8.5px 0 0 8px; background-position:0 -2553px}
-        .category-apps a span.pi61 i{ width:41px; height:31px; margin:8.5px 0 0 2.5px; background-position:0 -2677px}
-        .category-apps a span.pi62 i{ width:39px; height:33px; margin:7.5px 0 0 3.5px; background-position:0 -2708px}
-        .category-apps a span.pi63 i{ width:31px; height:34px; margin:7px 0 0 7.5px; background-position:0 -2741px}
-        .category-apps a span.pi64 i{ width:32px; height:32px; margin:7.5px 0 0 7px; background-position:-68px -168px}
-        .category-apps a span.pi65 i{ width:34px; height:34px; margin:7px 0 0 6px; background-position:-66px -133px}
-        .category-apps a:hover span{ top:-5px}
-
-
-
-
-    </style>
+    <link href="./css/show.css" title="" rel="stylesheet">
 
 </head>
 <body id="page-top" class="landing-page no-skin-config pace-done">
@@ -270,7 +74,7 @@
                       </p>
                   </div>
                   <div class="carousel-image wow zoomIn animated" style="visibility: visible;">
-                      <video id="myVideo" src="./video/cndns-banner-video-3.mp4" width="475px" height="300px" autoplay="autoplay" loop="loop" muted="muted" class="cndns-banner-video" style="position: absolute;left: 79px;top: 19px;">您的浏览器不支持 video 标签。</video>
+                      <video id="myVideo" src="./videos/cndns-banner-video-3.mp4" width="475px" height="300px" autoplay="autoplay" loop="loop" muted="muted" class="cndns-banner-video" style="position: absolute;left: 79px;top: 19px;">您的浏览器不支持 video 标签。</video>
                     <img src="./images/laptop.png" alt="laptop">
                   </div>
               </div>
@@ -495,7 +299,7 @@
               </div>
           </div>
           <div class="row">
-              <div class="col-lg-12 text-center cndns-main-category">
+              <div class="col-lg-12 text-center service-category">
                   <ul class="category-container">
                       <li class="noToppadding" >
                           <h4>域名&备案</h4>
