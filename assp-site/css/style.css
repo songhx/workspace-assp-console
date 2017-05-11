@@ -100,10 +100,6 @@ option {
 
 
 /*nav*/
-.logo{
-    background: url("../images/logo.png") no-repeat;
-}
-
 .logo-site{
     position: absolute;
     top: 18px;

@@ -195,3 +195,52 @@ a {
 .category-apps a span.pi64 i{ width:32px; height:32px; margin:7.5px 0 0 7px; background-position:-68px -168px}
 .category-apps a span.pi65 i{ width:34px; height:34px; margin:7px 0 0 6px; background-position:-66px -133px}
 .category-apps a:hover span{ top:-5px}
+
+
+
+.clip {
+    overflow: hidden!important
+}
+.shadow-darken25-bold {
+    box-shadow: 0 0 30px 6px rgba(31,51,73,.25)!important
+}
+.relative {
+    position: relative!important
+}
+.perspective-desktop-mm {
+    -webkit-transform: translateX(5%) perspective(1300px) rotateY(-20deg);
+    transform: translateX(3%) perspective(1300px) rotateY(-10deg)
+}
+
+.transition250 {
+    transition: all .25s ease-in
+}
+.mr0-ml {
+    margin-right: 0!important
+}
+.block {
+    display: block!important
+}
+.wmax960 {
+    max-width: 960px!important
+}
+.absolute {
+    position: absolute!important
+}
+.top {
+    top: 0!important
+}
+.right {
+    right: 0!important
+}
+
+.left {
+    left: 0!important
+}
+
+.bottom {
+    bottom: 0!important
+}
+.round {
+    border-radius: 4px!important
+}
