@@ -4,8 +4,37 @@
     desc:
           for show
 */
+.kf-pop{
+    position: fixed;
+    right: 2px;
+    top: 36%;
+    margin-top: -76px;
+    z-index: 999;
+}
+.circle,.ring{height:120px;position:relative;width:120px;}
+.circle{margin:100px auto 0 auto;}
+.ring{border-radius:50%;opacity:0;-webkit-transform-origin:50% 50%;-moz-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:scale(0.1) rotate(-270deg);-moz-transform:scale(0.1) rotate(-270deg);-transform:scale(0.1) rotate(-270deg);-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.open .ring{opacity:1;-webkit-transform:scale(1) rotate(0);-moz-transform:scale(1) rotate(0);-transform:scale(1) rotate(0);}
+.ring a{
+    background: #1ab394;
+    color: #fff;
+    padding: 2px 3px;
+    display: block;
+}
+.center{background-color:rgba(255,255,255,0.3);border-radius:50%;border:1px solid #ffffff;bottom:0;color:white;height:50px;left:0;ne-height:50px;margin:auto;position:absolute;right:0;text-agn:center;top:0;width:50px;-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;transition:all 0.4s ease-out;}
+.open .center{border-color:#aaaaaa;}
+.menuItem{border-radius:50%;display:block;height:18px;ne-height:18px;margin-left:-6px;margin-top:-6px;position:absolute;text-agn:center;width:18px;}
+
+.kf{
+    background-image:url(../images/n-qyjz-1.png);
+    background-repeat:no-repeat;
+    background-position:-293px -506px;
+}
 
 
+.cred{
+    color: #964b00;
+}
 /*模板展示*/
 
 a {
