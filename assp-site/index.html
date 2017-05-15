@@ -103,7 +103,7 @@
                 </ul>
             </div>
 
-            <div class="sBox">
+            <!--<div class="sBox">
                 <div class="subNav sublist-up"><span class="title-icon glyphicon glyphicon-chevron-up"></span><span class="sublist-title"><i class=" fa fa-handshake-o"></i>我要加盟</span>
                 </div>
                 <ul class="navContent" style="display:none">
@@ -115,7 +115,7 @@
                         <a href="module-join/indentify.html"><i class="fa fa-deafness"></i><span class="sub-title">加盟认证</span></a>
                     </li>
                 </ul>
-            </div>
+            </div>-->
 
         </div>
     </div>
@@ -352,6 +352,31 @@
 
 </div>
 
+<div class="oa-scroll-top" _addedevent="on,on,on,on,on,on">
+    <i class="icon top" title="回到顶部" style="display: block;"></i>
+    <i class="icon feedback"></i>
+    <i class="icon qrcode" style="display: inline-block;"></i>
+    <div class="qrcode-wrap" style="display: none; opacity: 1;">
+        <a href="javascritp://" class="close">X</a>
+        <ul>
+            <li>
+                <i class="step">第一步</i>
+                <div><span>左侧菜单-&gt;<a href="home.jsp#main/card">个人资料</a>：<br></span>
+                    <span>绑定您账号</span>
+                </div>
+            </li>
+            <li>
+                <i class="step">第二步</i>
+                <div>
+                    <span>关注E建站凭条</span>
+                </div>
+            </li>
+        </ul>
+        <div class="oa-qr-code">
+        </div>
+        <i class="triangle"></i>
+    </div>
+</div>
 
 
 <script src="./static/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -364,6 +389,13 @@
             $(this).tab('show')
         });
         $('#funTab li:eq(1) a').tab('show');
+        $('.qrcode').hover(function () {
+            $('.qrcode-wrap').show();
+        });
+        $('.close').click(function () {
+            $('.qrcode-wrap').hide();
+        });
+
     });
 </script>
 

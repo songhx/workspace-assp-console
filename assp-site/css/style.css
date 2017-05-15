@@ -307,3 +307,28 @@ tfoot .pagination{ margin:0px;}
 .info .companyInfo>li.normal{position:relative;/* overflow: hidden; */font-size: 14px;}
 .info .companyInfo>li.normal p.tips{display:none;position:absolute;top: 11px;left: 717px;border:1px solid #dcdcdc;padding: 0px 10px;max-width: 176px;line-height: 25px;background-color: #fff;}
 .info .companyInfo iframe{display:none}
+
+
+/*回到顶部与二维码*/
+.oa-scroll-top{position:fixed;right:0;bottom:156px;z-index:1000;line-height:0;font-size:0;}
+.oa-scroll-top .icon{background:url(../images/top_qrcode.png) no-repeat;width:40px;display:block;cursor:pointer;margin-top:3px;}
+.oa-scroll-top .icon.top{height:26px;background-position:0 -125px;position:absolute;top:-3px;left:0;display:none;}
+.oa-scroll-top .icon.feedback{height:38px;background-position:0 -154px;margin-top:29px;}
+.oa-scroll-top .icon.qrcode{height:38px;background-position:0 -195px;display: none;}
+.oa-scroll-top .icon.top:hover{background-position:0 0;}
+.oa-scroll-top .icon.feedback:hover{background-position:0 -29px;}
+.oa-scroll-top .icon.qrcode:hover{background-position:0 -70px;}
+.oa-scroll-top .remove{margin-left:10px;font-weight:normal;}
+.oa-scroll-top .remove:hover{text-decoration:underline;}
+.oa-scroll-top .close{font:11px "Comic Sans MS";font-weight:normal;position:absolute;right:10px;top:5px;color:#eee;}
+.oa-scroll-top .close:hover{color:white;}
+.qrcode-wrap{display:none;font-size:12px;line-height:2em;width:235px;height:300px;background-color:#46BAA2;position:absolute;right:45px;bottom:0;}
+.qrcode-wrap .remove{position: absolute; bottom: 5px; left: 0; color: #ccc;}
+.qrcode-wrap ul{width: 185px; margin: 20px 10px 5px 20px;}
+.qrcode-wrap ul li{color: #fff;}
+.qrcode-wrap ul a{text-decoration: underline;cursor: pointer;color: #fff;}
+.qrcode-wrap ul li div{margin-left:62px; line-height: 18px; padding-bottom: 10px;}
+.qrcode-wrap ul i.step{float:left;display: inline-block;width: 50px;border-radius: 5px;height: 20px;line-height:20px;background:#fff;color:#46BAA2;text-align: center;}
+.qrcode-wrap  .triangle{width:0;height:0;line-height:0;font-size:0;border:8px solid transparent;border-left-color:#46BAA2;position:absolute;bottom:6px;right:-15px;}
+.qrcode-wrap .oa-qr-code{margin-top:-50px;background-color:transparent;background-position:center 45px;width:100%;height: 220px;}
+.oa-qr-code{text-align:center;width:242px;background:#51C3AE url(../images/oa_qr_code.png) no-repeat center 58px;}
